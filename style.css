@@ -1,0 +1,101 @@
+
+/* Modern, clean style for index.html */
+body {
+	font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+	background: linear-gradient(120deg, #f8fafc 0%, #e0e7ff 100%);
+	margin: 0;
+	padding: 0;
+	color: #171728;
+	min-height: 100vh;
+
+
+.main-content {
+	max-width: 800px;
+	margin: 2rem auto;
+	background: #fff;
+	border-radius: 1rem;
+	box-shadow: 0 4px 24px rgba(79,70,229,0.08);
+	padding: 2rem;
+}
+}
+
+
+h1 {
+	text-align: center;
+	margin-top: 2rem;
+	margin-bottom: 1rem;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+main, .header-content {
+	max-width: 800px;
+	margin: 2rem auto;
+	background: #fff;
+	border-radius: 1rem;
+	box-shadow: 0 4px 24px rgba(79,70,229,0.08);
+	padding: 2rem;
+}
+
+ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 2rem;
+	list-style: none;
+	padding: 0;
+	margin: 1rem 0 2rem 0;
+}
+
+
+h1, h2, h3 {
+	font-weight: 700;
+	margin-bottom: 0.5em;
+}
+
+main {
+	max-width: 800px;
+	margin: 2rem auto;
+	background: #fff;
+	border-radius: 1rem;
+	box-shadow: 0 4px 24px rgba(79,70,229,0.08);
+	padding: 2rem;
+}
+body{
+    margin: 2rem auto;
+    padding: 0;
+    color: #22223b;
+}
+footer {
+	text-align: center;
+	padding: 0.5rem 0;
+	color: #22223b;
+	background: none;
+	border-top: 1px solid #e5e7eb;
+	margin-top: 2rem;
+	font-size: 0.9rem;
+
+footer #word-count {
+	display: inline-block;
+	margin-right: 1.5rem;
+	font-size: 0.9rem;
+}
+
+footer .btn, #generate-pdf {
+	font-size: 0.9rem;
+	padding: 0.4rem 1rem;
+	border-radius: 0.3rem;
+	margin-top: 0;
+	box-shadow: none;
+}
+
+@media print {
+	footer {
+		display: none !important;
+	}
+}
+}
