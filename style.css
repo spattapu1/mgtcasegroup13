@@ -1,69 +1,189 @@
 
-/* Modern, clean style for index.html */
+/* Modern, clean style for Tesla Case Analysis */
 
-body {
-	font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
-	background: linear-gradient(120deg, #f8fafc 0%, #e0e7ff 100%);
-	margin: 0;
-	padding: 0;
-	color: #171728;
-	min-height: 100vh;
-/* Removed stray closing brace */
-
-.main-content {
-	max-width: 800px;
-	margin: 2rem auto;
-	background: #fff;
-	border-radius: 1rem;
-	box-shadow: 0 4px 24px rgba(79,70,229,0.08);
-	padding: 2rem;
+* {
+	box-sizing: border-box;
 }
 
+body {
+	font-family: 'Inter', 'Segoe UI', 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+	background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+	margin: 0;
+	padding: 0;
+	color: #1a202c;
+	min-height: 100vh;
+	line-height: 1.6;
+}
+
+.main-content {
+	max-width: 900px;
+	margin: 2rem auto;
+	background: #ffffff;
+	border-radius: 20px;
+	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+	padding: 3rem;
+	backdrop-filter: blur(10px);
+}
 
 h1 {
 	text-align: center;
-	margin-top: 2rem;
-	margin-bottom: 1rem;
+	font-size: 2.5rem;
+	font-weight: 800;
+	margin: 0 0 2rem 0;
+	color: #1a202c;
 }
 
 h2 {
-    text-align: center;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
+	text-align: center;
+	font-size: 1.8rem;
+	font-weight: 700;
+	margin: 2rem 0 1rem 0;
+	color: #2d3748;
 }
 
-/* Remove duplicate main styles and header-content if not used */
-iframe {
-	display: block;
-	margin: 1rem auto;
-	border-radius: 0.5rem;
-	box-shadow: 0 4px 24px rgba(79,70,229,0.08);
+h3 {
+	font-size: 1.4rem;
+	font-weight: 600;
+	margin: 1.5rem 0 0.5rem 0;
+	color: #4a5568;
 }
-	
-ul{
+
+/* Group members list styling */
+ul {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	gap: 2rem;
+	flex-wrap: wrap;
+	gap: 1.5rem;
 	list-style: none;
 	padding: 0;
-	margin: 1rem 0 2rem 0;
+	margin: 1.5rem 0 2.5rem 0;
 }
 
-
-h1, h2, h3 {
-	font-weight: 700;	
-	margin-bottom: 0.5em;
+ul li {
+	background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+	padding: 0.75rem 1.5rem;
+	border-radius: 50px;
+	font-weight: 500;
+	color: #475569;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+	transition: all 0.3s ease;
 }
 
-main {
-	max-width: 800px;
-	margin: 2rem auto;
-	background: #fff;
-	border-radius: 1rem;
-	box-shadow: 0 4px 24px rgba(79,70,229,0.08);
+ul li:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Links section styling */
+.links {
+	background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
 	padding: 2rem;
+	border-radius: 15px;
+	margin: 2rem 0;
+	border-left: 4px solid #0ea5e9;
 }
-/* Remove duplicate body style */
+
+.links ul {
+	justify-content: flex-start;
+	margin: 1rem 0 0 0;
 }
-/* Remove unused footer styles if not present in HTML */
+
+.links li {
+	background: #0ea5e9;
+	color: white;
+	transition: all 0.3s ease;
+}
+
+.links li:hover {
+	background: #0284c7;
+	transform: translateY(-2px);
+}
+
+.links a {
+	color: inherit;
+	text-decoration: none;
+	font-weight: 600;
+}
+
+/* Write-up section styling */
+.write-up {
+	margin-top: 2rem;
+	padding: 2rem;
+	background: linear-gradient(135deg, #fefefe, #ffffff);
+	border-radius: 15px;
+	border: 1px solid #e5e7eb;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.write-up p {
+	margin-bottom: 1.5rem;
+	font-size: 1.1rem;
+	line-height: 1.7;
+	color: #4a5568;
+}
+
+/* Iframe styling - ensuring it fits properly */
+iframe {
+	display: block;
+	margin: 2rem auto;
+	border-radius: 10px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+	border: 1px solid #e2e8f0;
+	max-width: 100%;
+	width: 800px;
+	height: 210px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+	.main-content {
+		margin: 1rem;
+		padding: 2rem;
+	}
+	
+	h1 {
+		font-size: 2rem;
+	}
+	
+	ul {
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.links ul {
+		flex-direction: column;
+		align-items: stretch;
+	}
+	
+	iframe {
+		width: 100%;
+		max-width: 100%;
+		height: auto;
+		min-height: 210px;
+	}
+}
+
+@media (max-width: 480px) {
+	iframe {
+		width: 100%;
+		height: 200px;
+	}
+}
+
+/* Footer styling */
+footer {
+	text-align: center;
+	margin-top: 2rem;
+	padding: 1rem;
+	color: #718096;
+	font-size: 0.9rem;
+}
+
+#word-count {
+	background: rgba(255, 255, 255, 0.9);
+	padding: 0.5rem 1rem;
+	border-radius: 20px;
+	display: inline-block;
+	backdrop-filter: blur(10px);
+}
